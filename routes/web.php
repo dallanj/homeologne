@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Frontpage;
+use App\Http\Controllers\ReleasesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,5 +45,8 @@ Route::group(['middleware' =>[
  
 });
  
- // Route::get('/{urlslug}', Frontpage::class);
- Route::get('/', Frontpage::class);
+Route::get('/', Frontpage::class);
+
+Route::get('releases/', [ReleasesController::class, 'index'])->name('home');
+
+Route::get('releases/{album:slug}', [ReleasesController::class, 'show']);
