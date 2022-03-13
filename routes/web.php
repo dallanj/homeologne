@@ -37,6 +37,10 @@ Route::group(['middleware' =>[
     Route::get('/gallery', function () {
         return view('admin.gallery');
     })->name('gallery');
+
+    Route::get('/albums', function () {
+        return view('admin.albums');
+    })->name('albums');
  
 });
  

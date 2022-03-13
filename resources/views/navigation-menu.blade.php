@@ -18,6 +18,9 @@
                     <x-jet-nav-link href="{{ route('gallery') }}" :active="request()->routeIs('gallery')">
                         {{ __('Gallery') }}
                     </x-jet-nav-link>
+                    <x-jet-nav-link href="{{ route('albums') }}" :active="request()->routeIs('albums')">
+                        {{ __('Albums') }}
+                    </x-jet-nav-link>
                 </div>
             </div>
 
@@ -145,6 +148,9 @@
             </x-jet-responsive-nav-link>
             <x-jet-responsive-nav-link href="{{ route('gallery') }}" :active="request()->routeIs('gallery')">
                 {{ __('Gallery') }}
+            </x-jet-responsive-nav-link>
+            <x-jet-responsive-nav-link href="{{ route('albums') }}" :active="request()->routeIs('albums')">
+                {{ __('Albums') }}
             </x-jet-responsive-nav-link>
         </div>
 
